@@ -9,7 +9,7 @@ void main() {
 ```
 Hasil:
 
-![Hasil](/img/hello.png)
+![Hasil](img/hello.png)
 
 **print()** digunakan untuk menampilkan teks pada console
 
