@@ -161,7 +161,6 @@ var tes = Orbiter('Voyager II', DateTime(1997, 9, 5), 20.23232);
 tes.describe();
 ```
 Hasil:
-
 ![Hasil](img/inher.png)
 
 # Mixins
@@ -184,13 +183,28 @@ class PilotedCraft extends Spacecraft with Piloted {
 Dengan begitu **PilotedCraft** telah mempunya **astronauts** field serta method **describeCrew**
 
 # Interfaces and abstract classes
+## Interface
+Pada dart tidak terdapat *keyword* ***interface***, semua class secara implisit mendefinisikan ***interface***.
 ```dart
 class MockSpaceship implements Spacecraft {
   // ...
 }
 ```
+## Abstract
+```dart
+abstract class Describable {
+  void describe();
+
+  void describeWithEmphasis() {
+    print('=========');
+    describe();
+    print('=========');
+  }
+}
+```
 
 # Async
+Async digunakan untuk menghindari *callback* yang tidak teratur serta membuat *code* lebih mudah mudah dibaca dengan menggunakan *async* dan *await*
 ```dart
 const oneSecond = Duration(seconds: 1);
 // ···
@@ -200,3 +214,24 @@ Future<void> printWithDelay(String message) async {
 }
 ```
 # Exception
+Exception merupakan event yang terjadi ketika program menemui kesalahan pada saat instruksi program dijalankan.
+Untuk memunculkan *exception* menggunakan *keyword* <span style="color:#CA4FBF">throw</span>:
+```dart
+if (astronauts == 0) {
+  throw StateError('No astronauts.');
+}
+```
+Untuk menangkap sebuah exception dengan cara menggunakan *statement* <span style="color:#CA4FBF">try</span> dengan <span style="color:#CA4FBF">on</span> atau <span style="color:#CA4FBF">catch</span> atau bisa keduanya :
+```dart
+try {
+  for (var object in flybyObjects) {
+    var description = await File('$object.txt').readAsString();
+    print(description);
+  }
+} on IOException catch (e) {
+  print('Could not describe object: $e');
+} finally {
+  flybyObjects.clear();
+}
+```
+Exception biasanya digunakan untuk mengetahui apabila terdapat error atau tidak sesuai.
