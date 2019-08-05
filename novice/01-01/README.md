@@ -161,6 +161,7 @@ var tes = Orbiter('Voyager II', DateTime(1997, 9, 5), 20.23232);
 tes.describe();
 ```
 Hasil:
+
 ![Hasil](img/inher.png)
 
 # Mixins
