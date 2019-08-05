@@ -1,5 +1,7 @@
 # Hari ke-1 | Memulai Dart
+
 # Hello World
+
 fungsi **main()** harus ada disetiap aplikasi yang dibuat.
 
 ```dart
@@ -7,6 +9,7 @@ void main() {
   print('Hello, World');
 }
 ```
+
 Hasil:
 
 ![Hasil](img/hello.png)
@@ -14,7 +17,9 @@ Hasil:
 **print()** digunakan untuk menampilkan teks pada console
 
 # Variables
+
 Pada dart dapat menggunkan **var** untuk semua tipe data dan secara otomatis tipe data akan menyesuaikan dengan **value** dari variable tersebut
+
 ```dart
 var name = 'Voyager I';
 var year = 1997;
@@ -25,12 +30,17 @@ var image = {
   'url': '//path/to /saturn.jpg'
 };
 ```
+
 Pada code diatas varibale **name** akan bertipe **String**, **year** bertipe **int** , **antennaDiameter** bertipe **double**, **flyObjects** bertipe **Array** dan **image** berupa **map**
 
 # Control flow statements
+
 Variable diambil dari variable pada code diatas
+
 ## Conditional Statements IF ELSE
+
 Digunakan untuk kasus dengan syarat terntu atau terdapat beberapa kondisi yang memenuhi
+
 ```dart
 if (year >= 2001) {
    print('21st century');
@@ -38,41 +48,51 @@ if (year >= 2001) {
   print('20th century');
 }
 ```
+
 Hasil:
 
 ![Hasil](img/if.png)
 
 ## for in Loop
+
 **for in** loop dapat digunakan pada variabel yang berupa list atau array.
 Jadi setiap object yang terdapat pada list tersebut akan dipanggil
+
 ```dart
 for (var object in flybyObject) {
   print(object);
 }
 ```
+
 Hasil:
 
 ![Hasil](img/for-in.png)
 
 ## for loop
+
 **for** loop melakukan pengulangan dengan memberi inisialisasi, batas pengulangan serta operasi pengulangannya
+
 ```dart
 for(int month = 1; month <=12; month++){
   print(month);
 }
 ```
+
 Hasil:
 
 ![Hasil](img/for.png)
 
 ## while Loop
+
 **while** loop melakukan pengulangan saat kondisi terpenuhi atau **true**
+
 ```dart
 while (year < 2016) {
   year +=1;
   print(year);
 }
 ```
+
 Hasil:
 
 ![Hasil](img/while.png)
@@ -90,7 +110,9 @@ print(result);
 ```
 
 # Comments
+
 Pada Dart komentar biasanya menggunakan **//** digunakan untuk memberi tanda atau penjelasan pada suatu code
+
 ```dart
 // komentar untuk satu baris
 
@@ -99,8 +121,11 @@ ntuk beberapa baris */
 
 /// komentar dokumentasi digunakan pada dokomen libraries, classes dan members
 ```
+
 # Imports
+
 **import** digunakan untuk mengakses libraries
+
 ```dart
 // Importing core libraries
 import 'dart:math';
@@ -111,7 +136,9 @@ import 'package:test/test.dart';
 // Importing files
 import 'path/to/my_other_file.dart';
 ```
+
 # Classes
+
 ```dart
 class Spacecraft {
   String name;
@@ -142,7 +169,9 @@ void describe() {
 
 }
 ```
+
 untuk menggunakan class Spacecraft di dalam **main()** function yaitu dengan cara:
+
 ```dart
 var voyager = Spacecraft('Voyager I', DateTime(1997, 9, 5));
 voyager.describe();
@@ -150,22 +179,27 @@ voyager.describe();
 var voyager3 = Spacecraft.unlaunched('Voyager III');
 voyager3.describe;
 ```
+
 Hasil:
 
 ![Hasil](img/class.png)
 
 # Inheritance
+
 Inheritance atau Pewarisan dapat mewarisi method, properties dari parent class atau kelas induknya
+
 ```dart
 var tes = Orbiter('Voyager II', DateTime(1997, 9, 5), 20.23232);
 tes.describe();
 ```
+
 Hasil:
 
 ![Hasil](img/inher.png)
 
 # Mixins
-**Mixins** merupakan class dimana method dari class ini dapat digunakan pada kelas lain tanpa ***extends*** atau mewarisi class tersebut
+
+**Mixins** merupakan class dimana method dari class ini dapat digunakan pada kelas lain tanpa **_extends_** atau mewarisi class tersebut
 
 ```dart
 class Piloted {
@@ -175,23 +209,31 @@ class Piloted {
   }
 }
 ```
+
 Untuk menambahkan **mixin** pada suatu kelas yaitu dengan:
+
 ```dart
 class PilotedCraft extends Spacecraft with Piloted {
   // ...
 }
 ```
+
 Dengan begitu **PilotedCraft** telah mempunya **astronauts** field serta method **describeCrew**
 
 # Interfaces and abstract classes
+
 ## Interface
-Pada dart tidak terdapat *keyword* ***interface***, semua class secara implisit mendefinisikan ***interface***.
+
+Pada dart tidak terdapat _keyword_ **_interface_**, semua class secara implisit mendefinisikan **_interface_**.
+
 ```dart
 class MockSpaceship implements Spacecraft {
   // ...
 }
 ```
+
 ## Abstract
+
 ```dart
 abstract class Describable {
   void describe();
@@ -205,7 +247,9 @@ abstract class Describable {
 ```
 
 # Async
-Async digunakan untuk menghindari *callback* yang tidak teratur serta membuat *code* lebih mudah mudah dibaca dengan menggunakan *async* dan *await*
+
+Async digunakan untuk menghindari _callback_ yang tidak teratur serta membuat _code_ lebih mudah mudah dibaca dengan menggunakan _async_ dan _await_
+
 ```dart
 const oneSecond = Duration(seconds: 1);
 // ···
@@ -214,15 +258,20 @@ Future<void> printWithDelay(String message) async {
   print(message);
 }
 ```
+
 # Exception
+
 Exception merupakan event yang terjadi ketika program menemui kesalahan pada saat instruksi program dijalankan.
-Untuk memunculkan *exception* menggunakan *keyword* <span style="color:#CA4FBF">throw</span>:
+Untuk memunculkan _exception_ menggunakan _keyword_ <span style="color:#CA4FBF">throw</span>:
+
 ```dart
 if (astronauts == 0) {
   throw StateError('No astronauts.');
 }
 ```
-Untuk menangkap sebuah exception dengan cara menggunakan *statement* <span style="color:#CA4FBF">try</span> dengan <span style="color:#CA4FBF">on</span> atau <span style="color:#CA4FBF">catch</span> atau bisa keduanya :
+
+Untuk menangkap sebuah exception dengan cara menggunakan _statement_ <span style="color:#CA4FBF">try</span> dengan <span style="color:#CA4FBF">on</span> atau <span style="color:#CA4FBF">catch</span> atau bisa keduanya :
+
 ```dart
 try {
   for (var object in flybyObjects) {
@@ -235,4 +284,5 @@ try {
   flybyObjects.clear();
 }
 ```
+
 Exception biasanya digunakan untuk mengetahui apabila terdapat error atau tidak sesuai.
