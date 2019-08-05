@@ -40,7 +40,7 @@ if (year >= 2001) {
 ```
 Hasil:
 
-![Hasil](/img/if.png)
+![Hasil](img/if.png)
 
 ## for in Loop
 **for in** loop dapat digunakan pada variabel yang berupa list atau array.
@@ -52,7 +52,7 @@ for (var object in flybyObject) {
 ```
 Hasil:
 
-![Hasil](/img/for-in.png)
+![Hasil](img/for-in.png)
 
 ## for loop
 **for** loop melakukan pengulangan dengan memberi inisialisasi, batas pengulangan serta operasi pengulangannya
@@ -63,7 +63,7 @@ for(int month = 1; month <=12; month++){
 ```
 Hasil:
 
-![Hasil](/img/for.png)
+![Hasil](img/for.png)
 
 ## while Loop
 **while** loop melakukan pengulangan saat kondisi terpenuhi atau **true**
@@ -75,7 +75,7 @@ while (year < 2016) {
 ```
 Hasil:
 
-![Hasil](/img/while.png)
+![Hasil](img/while.png)
 
 # Functions
 
@@ -152,7 +152,7 @@ voyager3.describe;
 ```
 Hasil:
 
-![Hasil](/img/class.png)
+![Hasil](img/class.png)
 
 # Inheritance
 Inheritance atau Pewarisan dapat mewarisi method, properties dari parent class atau kelas induknya
@@ -162,7 +162,7 @@ tes.describe();
 ```
 Hasil:
 
-![Hasil](/img/inher.png)
+![Hasil](img/inher.png)
 
 # Mixins
 **Mixins** merupakan class dimana method dari class ini dapat digunakan pada kelas lain tanpa ***extends*** atau mewarisi class tersebut
