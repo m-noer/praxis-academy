@@ -1,4 +1,4 @@
-#Hari ke-1 
+# Hari ke-1 
 # Hello World
 fungsi **main()** harus ada disetiap aplikasi yang dibuat.
 
