@@ -32,4 +32,20 @@ main() {
   // ListReversed Method
   print(lst);
   print("Reverse List: ${lst.reversed}");
+
+  // List (Basic Operation)
+  // Inserting Elements into a List
+  // Single value
+  List l = [1, 2, 3];
+  l.add(12);
+  print(l);
+  //Multiple value
+  l.addAll([12, 13]);
+  print(l);
+
+  // List.insert()
+  l.insert(0, 30);
+  print(l);
+  // List.insertAll()
+  l.insertAll(2, [21, 23]);
 }
