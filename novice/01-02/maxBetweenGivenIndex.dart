@@ -1,5 +1,5 @@
 main() {
-  var T = [10, 2, 2, 4, 9];
+  var T = [10, 2, 2, 20, 4, 9, 30];
   print(MaxValue(T, 0, T.length));
 }
 

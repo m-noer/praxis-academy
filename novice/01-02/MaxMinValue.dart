@@ -8,27 +8,21 @@ main() {
   //   }
   // }
 
-  print("Minimum value: ${Min(T).toString()}");
-  print("Maximum value: ${Max(T).toString()}");
+  print("Minimum value: ${MaxMin(T)[0]}");
+  print("Maximum value: ${MaxMin(T)[1]}");
 }
 
-int Min(T) {
+MaxMin(T) {
   int min = T[0];
+  int max = T[0];
 
-  for (var i = 0; i < T.length; i++) {
+  for (var i = 1; i < T.length; i++) {
     if (T[i] < min) {
       min = T[i];
     }
-  }
-  return min;
-}
-
-int Max(T) {
-  int max = T[0];
-  for (var i = 0; i < T.length; i++) {
     if (T[i] > max) {
       max = T[i];
     }
   }
-  return max;
+  return [min, max];
 }
