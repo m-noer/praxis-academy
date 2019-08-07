@@ -125,3 +125,50 @@ Hasil:
 <img src="img/inherit.png">
 
 ## Static Keyword
+
+**Static** _keyword_ dapat diaplikasikan pada data member dari **_class_** seperti **fields**, **method**.
+
+Contoh Penggunaan **Static** _keyword_ ada pada file <a href="staticKeyword.dart">staticKeyword.dart</a>
+
+```dart
+class StaticMem {
+   static int num;
+   static disp() {
+      print("The value of num is ${StaticMem.num}")  ;
+   }
+}
+void main() {
+   StaticMem.num = 12;
+   // initialize the static variable }
+   StaticMem.disp();
+   // invoke the static method
+}
+```
+
+## Super Keyword
+
+Contoh Penggunaan **Static** _keyword_ ada pada file <a href="staticKeyword.dart">staticKeyword.dart</a>
+
+```dart
+void main() {
+  Child c = new Child();
+  c.m1(12);
+}
+
+class Parent {
+  String msg = "message variable from the parent class";
+  void m1(int a) {
+    print("value of a ${a}");
+  }
+}
+
+class Child extends Parent {
+  @override
+  void m1(int b) {
+    print("value of b ${b}");
+    super.m1(13);
+    print("${super.msg}");
+  }
+}
+
+```
