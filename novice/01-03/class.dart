@@ -5,3 +5,8 @@ class Car {
     print(engine);
   }
 }
+
+main() {
+  Car c = new Car();
+  c.disp();
+}
