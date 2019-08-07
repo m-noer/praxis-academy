@@ -1,8 +1,8 @@
 // Dart Constructors
 main() {
   Car c = new Car('E1001');
-  Car2 c1 = new Car2();
-  Car2 c2 = new Car2.nameConst('E1002');
+  // Car2 c1 = new Car2();
+  // Car2 c2 = new Car2.nameConst('E1002');
 }
 
 class Car {
