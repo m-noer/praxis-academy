@@ -1,4 +1,4 @@
-# Hari | Struktur Data, Collections, dan Generics
+# Hari 4 | Struktur Data, Collections, dan Generics
 
 ###### Muhammad Noerhidayatullah - Kamis, 8 Agustus 2019
 
@@ -23,7 +23,7 @@ atau
 Sintaks untuk menginisialisasi `list` seperti berikut ini :
 `lst_name[index] = value;`
 
-##### Contoh :
+Contoh :
 
 ```dart
 void main() {
@@ -36,7 +36,7 @@ void main() {
 
 ```
 
-###### output
+Output:
 
 `[12, 13, 11]`
 
@@ -54,9 +54,9 @@ var list_name = new List()
 
 ##### 2. Inisialisasi List
 
-`list_name[index] = value;
+`list_name[index] = value;`
 
-##### Contoh :
+Contoh :
 
 ```dart
 void main() {
@@ -66,7 +66,7 @@ void main() {
 
 ```
 
-output:
+Output:
 
 ```
 [Ikan Bakar, Bakso, Ayam Goreng];
@@ -175,6 +175,7 @@ void main() {
 ```
 
 Output :
+
 `3`
 
 ## `Maps`
@@ -182,7 +183,7 @@ Output :
 Map berguna untuk menyimpan data termasuk `key` nya.
 Ketika ingin mengambil data dari `map` akan dibutuhkan `key` nya untuk mendapat `value` daru `key` tersebut.
 
-#### Deklarasi Map` menggunakan Map Literals
+#### Deklarasi `Map` menggunakan Map Literals
 
 `var map_name = {key1:value1, key2:value2};`
 
