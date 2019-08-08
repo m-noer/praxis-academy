@@ -7,7 +7,7 @@
 ### `List`
 
 `List` adalah kumpulan data yang memiliki tipe data yang sama atau istilahnya disebut `array`.
-Indeks pada list dimulai dari `0`.
+Indeks pada list dimulai dari **0**.
 
 #### Fixed Length List
 
