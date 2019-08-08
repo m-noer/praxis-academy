@@ -244,3 +244,5 @@ merah
 kuning
 hijau
 ```
+
+## Generics
