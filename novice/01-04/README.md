@@ -68,7 +68,7 @@ void main() {
 
 output:
 
-```dart
+```
 [Ikan Bakar, Bakso, Ayam Goreng];
 ```
 
@@ -246,3 +246,119 @@ hijau
 ```
 
 ## Generics
+
+#### Sintaks
+
+`Collection_name <data_type> identifier = new Collection_name<data_type>`
+
+## `Generic List`
+
+Contoh :
+
+```dart
+void main() {
+  List<String> logTypes = new List<String>();
+
+  logTypes.add("WARNING");
+  logTypes.add("ERROR");
+  logTypes.add("INFO");
+
+  for (String type in logTypes) {
+    print(type);
+  }
+}
+
+```
+
+Output:
+
+```
+WARNING
+ERROR
+INFO
+```
+
+Apabila ditambahkan _value_ selain tipe data yang telah ditentukan akan menghasilkan `error` seperti contoh berikut ini :
+
+```dart
+void main() {
+  List<String> logTypes = new List<String>();
+  logTypes.add(1);
+  logTypes.add("ERROR");
+  logTypes.add("INFO");
+
+  //iterating across list
+  for (String type in logTypes) {
+    print(type);
+  }
+}
+```
+
+Output:
+
+```
+Error: The argument type 'int' can't be assigned to the parameter type 'String'.
+Try changing the type of the parameter, or casting the argument to 'String'.
+  logTypes.add(1);
+```
+
+## `Generic Set`
+
+```dart
+void main() {
+  Set<int> numberSet = new Set<int>();
+  numberSet.add(100);
+  numberSet.add(20);
+  numberSet.add(5);
+  numberSet.add(70);
+
+  // numberSet.add("Tom");
+
+  print("Default implementation : ${numberSet.runtimeType}");
+
+  for (var no in numberSet) {
+    print(no);
+  }
+}
+
+```
+
+Output:
+
+```
+Default implementation : _CompactLinkedHashSet<int>
+100
+20
+5
+70
+```
+
+## `Generic Queue`
+
+```dart
+import 'dart:collection';
+
+void main() {
+  Queue<int> queue = new Queue<int>();
+  print("Default implementation ${queue.runtimeType}");
+  queue.addLast(10);
+  queue.addLast(20);
+  queue.addLast(30);
+  queue.addLast(40);
+
+  for (int no in queue) {
+    print(no);
+  }
+}
+
+```
+
+Output :
+
+```
+Default implementation ListQueue<int>
+10
+20
+30
+40
+```
