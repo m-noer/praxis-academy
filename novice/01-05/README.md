@@ -218,4 +218,5 @@ Output pada Terminal:
 ```
 
 Output File `kasus.txt` :
+
 <img src='img/file.png'>
