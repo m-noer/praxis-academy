@@ -6,7 +6,9 @@
 
 ## `Asynchoronous`
 
-Hasil eksekusi atau output tidak selalu berdasarkan urutan kode, tapi berdasarkan waktu proses.
+Asynchronous adalah dimana kode bisa melanjutkan sebuah blok kode tanpa perlu menunggu kode diatas atau sebelumnya selesai si eksekusi.
+Pada **dart** terdapat _Class_ yang digunakan dalam `asynchronous` yaitu `Future` dan `Stream`.
+Perbedaan antara `Future` dengan `Stream` adalah `Future` hanya menghasilkan sebuah value untuk diproses oleh `Stream`.
 
 ### `Future`
 
