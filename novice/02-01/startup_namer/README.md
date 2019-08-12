@@ -528,6 +528,6 @@ class MyApp extends StatelessWidget {
 
 Output:
 
-<img src='images/final.gif' height="400">
+<img src='images/final.gif' height="480" style="margin-left: 100px">
 
 <img src='images/final.png'>
