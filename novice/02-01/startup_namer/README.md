@@ -528,4 +528,6 @@ class MyApp extends StatelessWidget {
 
 Output:
 
+<img src='images/final.gif'>
+
 <img src='images/final.png'>
