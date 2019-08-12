@@ -269,7 +269,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Startup Name Generator',
-      debugShowCheckedModeBanner: false,
       home: RandomWords(),
     );
   }
@@ -279,4 +278,10 @@ class MyApp extends StatelessWidget {
 
 Output:
 
-<img src='images/final1.jpeg'>
+<img src='images/final0.jpeg'>
+
+> #### Info
+>
+> Untuk menghilangkan banner **debug** pada pojok kanan atas yaitu dengan cara pada `MaterialApp()` tambahkan `debugShowCheckedModeBanner: false`.
+> Sehingga hasilnya menjadi seperti ini :
+> <img src='images/final1.jpeg'>
