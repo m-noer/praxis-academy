@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(new MaterialApp(home: new AwesomeButton()));
+  runApp(MaterialApp(
+    home: AwesomeButton(),
+    debugShowCheckedModeBanner: false,
+  ));
 }
 
 class AwesomeButton extends StatefulWidget {
   @override
-  AwesomeButtonState createState() => new AwesomeButtonState();
+  _AwesomeButtonState createState() => _AwesomeButtonState();
 }
 
-class AwesomeButtonState extends State<AwesomeButton> {
+class _AwesomeButtonState extends State<AwesomeButton> {
   int counter = 0;
-  List<String> strings = ["Praxis", "Academy", "is", "Awesome"];
+  List<String> strings = ['Praxis', 'Academy', 'is', 'Awesome'];
   String displayedString = "";
 
   void onPressed() {
@@ -23,27 +26,34 @@ class AwesomeButtonState extends State<AwesomeButton> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-          title: new Text("Stateful Widget!"),
-          backgroundColor: Colors.deepOrange),
-      body: new Container(
-        child: new Center(
-          child: new Column(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Button Statefull Widget"),
+      ),
+      body: Container(
+        child: Center(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              new Text(displayedString,
-                  style: new TextStyle(
-                      fontSize: 30.0, fontWeight: FontWeight.bold)),
-              new Padding(padding: new EdgeInsets.all(15.0)),
-              new RaisedButton(
-                  child: new Text("Press me!",
-                      style: new TextStyle(
-                          color: Colors.white,
-                          fontStyle: FontStyle.italic,
-                          fontSize: 20.0)),
-                  color: Colors.red,
-                  onPressed: onPressed)
+              Text(
+                displayedString,
+                style: TextStyle(
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(15.0),
+              ),
+              RaisedButton(
+                child: Text("Press me!",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontStyle: FontStyle.italic,
+                        fontSize: 20.0)),
+                color: Colors.blue,
+                onPressed: onPressed,
+              )
             ],
           ),
         ),
