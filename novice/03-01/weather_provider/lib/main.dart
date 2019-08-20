@@ -97,6 +97,4 @@ class _CityInputFieldState extends State<CityInputField> {
       ),
     );
   }
-
-  void submitCityName(String cityName) {}
 }
