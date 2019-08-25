@@ -168,8 +168,8 @@ Text(AppLocalizations.of(context).translate('greeting'))
 
 ##### Bahasa Indonesia
 
-<img width='500' src='assets/images/id.png'>
+<img src='assets/images/id.png'>
 
 ##### Bahasa Inggris
 
-<img width='500' src='assets/images/en.png'>
+<img src='assets/images/en.png'>
