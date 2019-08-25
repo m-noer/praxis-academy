@@ -112,10 +112,14 @@ class _AppLocalizationsDelegate
 
 ```
 
-#### Pada File `main.dart` di class `MyApp`
+#### Pada File `main.dart` dan di class `MyApp`
 
 ```dart
+import 'app_localizations.dart';
+import 'app_localizations.dart';
+
 ...
+
 return MaterialApp(
   title: 'Travel App',
   debugShowCheckedModeBanner: false,
