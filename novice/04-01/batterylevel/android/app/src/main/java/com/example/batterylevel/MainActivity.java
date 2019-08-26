@@ -26,22 +26,24 @@ public class MainActivity extends FlutterActivity {
     super.onCreate(savedInstanceState);
     GeneratedPluginRegistrant.registerWith(this);
 
-    new MethodChannel(getFlutterView(), CHANNEL).setMethodCallHandler(
-            (call, result) -> {
-              // Note: this method is invoked on the main thread.
-              //getBatteryLevel
-              if (call.method.equals("getBatteryLevel")) {
-                int batteryLevel = getBatteryLevel();
+new MethodChannel(getFlutterView(), CHANNEL).setMethodCallHandler(
+                new MethodCallHandler() {
+                    @Override
+                    public void onMethodCall(MethodCall call, Result result) {
+    // Note: this method is invoked on the main thread.
+    if (call.method.equals("getBatteryLevel")) {
+        int batteryLevel = getBatteryLevel();
 
-                if (batteryLevel != -1) {
-                  result.success(batteryLevel);
-                } else {
-                  result.error("UNAVAILABLE", "Battery level not available.", null);
-                }
-              } else {
-                result.notImplemented();
-              }
-            });
+        if (batteryLevel != -1) {
+            result.success(batteryLevel);
+        } else {
+            result.error("UNAVAILABLE", "Battery level not available.", null);
+        }
+    } else {
+        result.notImplemented();
+    }
+}
+                });
   }
   private int getBatteryLevel() {
     int batteryLevel = -1;
